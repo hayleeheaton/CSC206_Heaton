@@ -1880,7 +1880,7 @@ input[type=checkbox].w3-check, input[type=radio].w3-radio {
     background-color: #ffeb3b !important;
 }
 
-.w3-white, .w3-hover-white:hover {
+.w3-hover-white:hover {
     color: #000 !important;
     background-color: #fff !important;
 }
