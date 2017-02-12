@@ -1,57 +1,7 @@
-﻿<!DOCTYPE html>
-<html>
-<head>
-    <title>Connected</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="main.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open Sans">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <style>
-        h1, h2, h3, h4, h5, h6 {
-            font-family: "Oswald";
-        }
-
-        body {
-            font-family: "Open Sans";
-        }
-    </style>
-</head>
-
-
-<body class="w3-light-grey">
-
-    <!-- Navigation bar with social media icons -->
-    <ul class="w3-navbar w3-black w3-hide-small">
-        <li><a href="#"><i class="fa fa-facebook-official"></i></a></li>
-        <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-        <li><a href="#"><i class="fa fa-snapchat"></i></a></li>
-        <li><a href="#"><i class="fa fa-flickr"></i></a></li>
-        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-        <li class="w3-right"><a href="#"><i class="fa fa-search"></i></a></li>
-    </ul>
-
-    <!-- w3-content defines a container for fixed size centered content,
-    and is wrapped around the whole page content, except for the footer in this example -->
-    <div class="w3-content" style="max-width:1600px">
-
-        <!-- Header -->
-        <header class="w3-container w3-center w3-padding-48 w3-white">
-            <h1 class="w3-xxxlarge"><b>CONNECTED BLOGLIFE</b></h1>
-            <h6>Welcome to the blog of <span class="w3-tag">Haylee's world</span></h6>
-        </header>
-
-        <!-- Image header -->
-        <header class="w3-display-container w3-wide" id="home">
-            <img class="background-image" src="Images\Sunset.jpg">
-            <div class="w3-display-left w3-padding-xlarge">
-                <h1 class="w3-text-white">Haylee's</h1>
-                <h1 class="w3-jumbo w3-text-white w3-hide-small"><b>PHOTOGRAPHY BLOG</b></h1>
-                <h6><button class="w3-btn w3-white w3-padding-large w3-large w3-opacity w3-hover-opacity-off" onclick="document.getElementById('subscribe').style.display='block'">SUBSCRIBE</button></h6>
-            </div>
-        </header>
+<?php
+include("../templates/layout.php");
+Layout::pageTop('../templates/layout.php');
+?>
 
         <!-- Grid -->
         <div class="w3-row w3-padding w3-border">
@@ -67,10 +17,7 @@
                     </div>
 
                     <div class="w3-justify">
-                        <?php
-                        $image_name = '...public\assets\images\HollidaysburgOverlook.jpg';
-                        ?>
-                        alt="Hollidaysburg" style="width:100%" class="w3-padding-12">
+                        <img src="../assets/images/HollidaysburgOverlook.jpg" alt="Hollidaysburg" style="width:100%" class="w3-padding-12">
                         <p>
                             <strong>Downtown!</strong> I grew up a mile away from the downtown area.  I have grown to love and care for the town.
                             It is always a blessing to go home and be a part of the little town.
@@ -100,7 +47,7 @@
                     </div>
 
                     <div class="w3-justify">
-                        <img src="Images\Chincoteague.jpg" alt="Vacation" style="width:100%" class="w3-padding-12">
+                        <img src="../assets/images/Chincoteague.jpg" alt="Vacation" style="width:100%" class="w3-padding-12">
                         <p>
                             <strong>Bay!</strong> Loved spending the last few days with my family before I go off to
                             college!  I'm going to miss them so much.
@@ -138,7 +85,7 @@
                                 </div>
                             </div>
                         </div>
-                                    
+
                         <!-- Blog entry -->
                         <div class="w3-container w3-white w3-margin w3-padding-large">
                             <div class="w3-center">
@@ -147,11 +94,11 @@
                             </div>
 
                             <div class="w3-justify">
-                                <img src="Images\PromDad.jpg" alt="Dad before Prom" style="width:100%" class="w3-padding-12">
+                                <img src="../assets/images/PromDad.jpg" alt="Dad before Prom" style="width:100%" class="w3-padding-12">
                                 <p><strong>Dress Up!</strong> My dad just got me a Dodge Charger!</p>
                                 <p>
-                                    My dad tried to finish his black 69 camaro for me to drive to prom.
-                                    After he realized that he wasn't going to make the deadline, he told me
+My dad tried to finish his black 69 camaro for me to drive to prom.
+After he realized that he wasn't going to make the deadline, he told me
                                     that he rented a car for me to use for a week to make up for it.  I was
                                     so suprised because I told him that I was okay just driving the car to
                                     prom and it wouldn't be that big of a deal.
@@ -201,11 +148,11 @@
                     <div class="w3-col l4">
                         <!-- About Card -->
                         <div class="w3-white w3-margin">
-                            <img src="Images\TrainTracks.jpg" alt="Haylee" style="width:100%" class="w3-grayscale">
+                            <img src="../assets/images/TrainTracks.jpg" alt="Haylee" style="width:100%" class="w3-grayscale">
                             <div class="w3-container w3-black">
                                 <h4>Haylee</h4>
                                 <p>Just me, myself and I, exploring the universe of uknownment. I have a heart of love and a interest of photography.
-                                I'm excited to share the world with you through my eyes.</p>
+I'm excited to share the world with you through my eyes.</p>
                             </div>
                         </div>
                         <hr>
@@ -217,25 +164,25 @@
                             </div>
                             <ul class="w3-ul w3-hoverable w3-white">
                                 <li class="w3-padding-16">
-                                    <img src="Images\Phantom 3.jpg" alt="Drone" class="w3-left w3-margin-right" style="width:50px">
+                                    <img src="../assets/images/Phantom 3.jpg" alt="Drone" class="w3-left w3-margin-right" style="width:50px">
                                     <span class="w3-large">Phantom 3 Drone</span>
                                     <br>
                                     <span>Christmas Present</span>
                                 </li>
                                 <li class="w3-padding-16">
-                                    <img src="Images\Gabi2.jpg" alt="Center of Campus" class="w3-left w3-margin-right" style="width:50px">
+                                    <img src="../assets/images/Gabi2.jpg" alt="Center of Campus" class="w3-left w3-margin-right" style="width:50px">
                                     <span class="w3-large">Photoshoot!</span>
                                     <br>
                                     <span>Center of Campus</span>
                                 </li>
                                 <li class="w3-padding-16">
-                                    <img src="Images\Flying the Drone.jpg" alt="Dad Hunter and Vlad" class="w3-left w3-margin-right" style="width:50px">
+                                    <img src="../assets/images/Flying the Drone.jpg" alt="Dad Hunter and Vlad" class="w3-left w3-margin-right" style="width:50px">
                                     <span class="w3-large">High in the Sky</span>
                                     <br>
                                     <span>Dad, Hunter and Vlad flying the drone.</span>
                                 </li>
                                 <li class="w3-padding-16">
-                                    <img src="Images\Kari2.jpg" alt="Old Main" class="w3-left w3-margin-right w3-sepia" style="width:50px">
+                                    <img src="../assets/images/Kari2.jpg" alt="Old Main" class="w3-left w3-margin-right w3-sepia" style="width:50px">
                                     <span class="w3-large">Photoshoot!</span>
                                     <br>
                                     <span>Old Main</span>
@@ -251,7 +198,7 @@
                             </div>
                             <div class="w3-container w3-white">
                                 <div class="w3-container w3-display-container w3-light-grey w3-section" style="height:200px">
-                                    <span class="w3-display-middle"><img src="Images\Ad.png" /></span>
+                                    <span class="w3-display-middle"><img src="../assets/images/Ad.png" /></span>
                                 </div>
                             </div>
                         </div>
@@ -365,3 +312,6 @@
 
 
 </html>
+
+
+?>
