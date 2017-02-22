@@ -58,7 +58,7 @@ h1, h2, h3, h4, h5, h6 {
 
         <!-- Image header -->
         <header class="w3-display-container w3-wide" id="home">
-            <img class="background-image" src="../public/assets/images/Sunset.jpg">
+            <img class="background-image" src="/assets/images/ChimneyRocks.jpg">
             <div class="w3-display-left w3-padding-xlarge">
                 <h1 class="w3-text-white">Haylee's</h1>
                 <h1 class="w3-jumbo w3-text-white w3-hide-small"><b>PHOTOGRAPHY BLOG</b></h1>

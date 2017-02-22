@@ -1,5 +1,6 @@
 <?php
 include("../templates/layout.php");
+require_once '../templates/layout.php';
 Layout::pageTop('../templates/layout.php');
 ?>
 
@@ -312,6 +313,3 @@ I'm excited to share the world with you through my eyes.</p>
 
 
 </html>
-
-
-?>
