@@ -1,87 +1,154 @@
 <?php
-class layout
-{
-    /**
-     * Creates the top part of the page.  This will usually be the HEAD area plus the nav bar and anything else that is
-     * above the "content" of that page.
-     *
-     * @param $title
-     */
-    public static function pageTop($title)
-    {
-        // This builds the web path to the app.css file and is embedded in the header below
-        echo <<<pagetop
-    <!DOCTYPE html>
-<html>
-<head>
-    <title>Connected</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="../assets/css/main.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open Sans">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <style>
-h1, h2, h3, h4, h5, h6 {
-    font-family: "Oswald";
-        }
+include("../templates/layout.php");
+require_once '../templates/layout.php';
+Layout::pageTop('../templates/layout.php');
+?>
 
-        body {
-    font-family: "Open Sans";
-        }
-    </style>
-</head>
+<!-- Grid -->
+        <div class="w3-row w3-padding w3-border">
 
+            <!-- Blog entries -->
+            <div class="w3-col l8 s12">
 
-<body class="w3-light-grey">
+                <!-- Blog entry -->
+                <div class="w3-container w3-white w3-margin w3-padding-large">
+                    <div class="w3-center">
+                        <h3>CHIMNEY ROCKS</h3>
+                        <h5>Hollidaysburg PA, <span class="w3-opacity"> January 1, 2017</span></h5>
+                    </div>
 
-    <!-- Navigation bar with social media icons -->
-    <ul class="w3-navbar w3-black w3-hide-small">
-        <li><a href="#"><i class="fa fa-facebook-official"></i></a></li>
-        <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-        <li><a href="#"><i class="fa fa-snapchat"></i></a></li>
-        <li><a href="#"><i class="fa fa-flickr"></i></a></li>
-        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-        <li><a href="/CreatePost.php"><img src="../assets/images/plussign.png"></li>
-        <li class="w3-right"><a href="#"><i class="fa fa-search"></i></a></li>
-    </ul>
+                    <div class="w3-justify">
+                        <img src="../assets/images/HollidaysburgOverlook.jpg" alt="Hollidaysburg" style="width:100%" class="w3-padding-12">
+                        <p>
+                            <strong>Downtown!</strong> I grew up a mile away from the downtown area.  I have grown to love and care for the town.
+                            It is always a blessing to go home and be a part of the little town.
+                        </p>
+                        <p class="w3-left"><button class="w3-btn w3-white w3-border" onclick="likeFunction(this)"><b><i class="fa fa-thumbs-up"></i> Like</b></button></p>
+                        <p class="w3-right"><button class="w3-btn" onclick="myFunction('demo1')" id="myBtn"><b>Replies &nbsp;</b> <span class="w3-tag w3-white">1</span></button></p>
+                        <p class="w3-clear"></p>
+                        <div class="w3-row w3-padding-bottom w3-show" id="demo1" style="display:none">
+                            <hr>
+                            <div class="w3-col l2 m3">
+                                <img src="/w3images/avatar_smoke.jpg" style="width:90px;">
+                            </div>
+                            <div class="w3-col l10 m9">
+                                <h4>George <span class="w3-opacity w3-medium">January 1, 2017, 6:32 PM</span></h4>
+                                <p>Great blog post! Following</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <hr>
 
-    <!-- w3-content defines a container for fixed size centered content,
-    and is wrapped around the whole page content, except for the footer in this example -->
-    <div class="w3-content" style="max-width:1600px">
+                <!-- Blog entry -->
+                <div class="w3-container w3-white w3-margin w3-padding-large">
+                    <div class="w3-center">
+                        <h3>FAMILY</h3>
+                        <h5>The Family, <span class="w3-opacity">August 20, 2016</span></h5>
+                    </div>
 
-        <!-- Header -->
-        <header class="w3-container w3-center w3-padding-48 w3-white">
-            <h1 class="w3-xxxlarge"><b>CONNECTED BLOGLIFE</b></h1>
-            <h6>Welcome to the blog of <span class="w3-tag">Haylee's world</span></h6>
-        </header>
+                    <div class="w3-justify">
+                        <img src="../assets/images/Chincoteague.jpg" alt="Vacation" style="width:100%" class="w3-padding-12">
+                        <p>
+                            <strong>Bay!</strong> Loved spending the last few days with my family before I go off to
+                            college!  I'm going to miss them so much.
+                        </p>
+                        <p>
+                            In four days I have to walk away from my family.  I don't
+                            know what I would do without them! I'm looking forward to fall break
+                            so I can be back with them again!!
+                        </p>
+                        <p class="w3-left"><button class="w3-btn w3-white w3-border" onclick="likeFunction(this)"><b><i class="fa fa-thumbs-up"></i> Like</b></button></p>
+                        <p class="w3-right"><button class="w3-btn" onclick="myFunction('demo2')"><b>Replies &nbsp;</b> <span class="w3-tag w3-white">2</span></button></p>
+                        <p class="w3-clear"></p>
 
-        <!-- Image header -->
-        <header class="w3-display-container w3-wide" id="home">
-            <img class="background-image" src="/assets/images/ChimneyRocks.jpg">
-            <div class="w3-display-left w3-padding-xlarge">
-                <h1 class="w3-text-white">Haylee's</h1>
-                <h1 class="w3-jumbo w3-text-white w3-hide-small"><b>PHOTOGRAPHY BLOG</b></h1>
-                <h6><button class="w3-btn w3-white w3-padding-large w3-large w3-opacity w3-hover-opacity-off" onclick="document.getElementById('subscribe').style.display='block'">SUBSCRIBE</button></h6>
-            </div>
-        </header>
+                        <!-- Example of comment field -->
+                        <div id="demo2" style="display:none">
+                                    <div class="w3-row">
+                                        <hr>
+                                        <div class="w3-col l2 m3">
+                                            <img src="/w3images/girl_train.jpg" style="width:90px;">
+                                        </div>
+                                        <div class="w3-col l10 m9">
+                                            <h4>Amber <span class="w3-opacity w3-medium">April 26, 2015, 10:52 PM</span></h4>
+                                            <p>You'll have fun in college! Your family is the best!</p><br>
+                                        </div>
+                                    </div>
+                                    <div class="w3-row w3-pa. dding-bottom">
+                                        <div class="w3-col l2 m3">
+                                            <img src="/w3images/girl.jpg" style="width:90px;">
+                                        </div>
+                                        <div class="w3-col l10 m9">
+                                            <h4>Angie <span class="w3-opacity w3-medium">April 23, 2015, 9:12 PM</span></h4>
+                                            <p>Love your family!!</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
 
-pagetop;
-    }
+                        <!-- Blog entry -->
+                        <div class="w3-container w3-white w3-margin w3-padding-large">
+                            <div class="w3-center">
+                                <h3>PROM</h3>
+                                <h5>Senior Prom, <span class="w3-opacity">May 23, 2016</span></h5>
+                            </div>
 
-    public static function rightSide()
-    {
-        echo <<<rightside
-  <!-- About/Information menu -->
-                    <div class=".w3-col m6">
+                            <div class="w3-justify">
+                                <img src="../assets/images/PromDad.jpg" alt="Dad before Prom" style="width:100%" class="w3-padding-12">
+                                <p><strong>Dress Up!</strong> My dad just got me a Dodge Charger!</p>
+                                <p>
+                                </p>
+                                <p class="w3-left"><button class="w3-btn w3-white w3-border" onclick="likeFunction(this)"><b><i class="fa fa-thumbs-up"></i> Like</b></button></p>
+                                <p class="w3-right"><button class="w3-btn" onclick="myFunction('demo3')"><b>Replies &nbsp;</b> <span class="w3-tag w3-white">3</span></button></p>
+                                <p class="w3-clear"></p>
+
+                                <!-- Example of comment field -->
+                                <div id="demo3" style="display:none">
+                                    <hr>
+                                    <div class="w3-row w3-margin-bottom">
+                                        <div class="w3-col l2 m3">
+                                            <img src="/w3images/girl_mountain.jpg" style="width:90px;">
+                                        </div>
+                                        <div class="w3-col l10 m9">
+                                            <h4>Jane <span class="w3-opacity w3-medium">April 10, 2015, 7:22 PM</span></h4>
+                                            <p>This picture is so pretty. You look gorgeous!</p>
+                                        </div>
+                                    </div>
+                                    <div class="w3-row w3-margin-bottom">
+                                        <div class="w3-col l2 m3">
+                                            <img src="/w3images/boy.jpg" style="width:90px;">
+                                        </div>
+                                        <div class="w3-col l10 m9">
+                                            <h4>John <span class="w3-opacity w3-medium">April 8, 2015, 10:32 PM</span></h4>
+                                            <p>Like Father, Like Daughter</p>
+                                        </div>
+                                    </div>
+                                    <div class="w3-row w3-padding-bottom">
+                                        <div class="w3-col l2 m3">
+                                            <img src="/w3images/girl_hood.jpg" style="width:90px;">
+                                        </div>
+                                        <div class="w3-col l10 m9">
+                                            <h4>Anja <span class="w3-opacity w3-medium">April 7, 2015, 9:12 PM</span></h4>
+                                            <p>Beautiful Picture!</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- END BLOG ENTRIES -->
+                    </div>
+
+                    <!-- About/Information menu -->
+                    <div class="w3-col l4">
                         <!-- About Card -->
                         <div class="w3-white w3-margin">
                             <img src="../assets/images/TrainTracks.jpg" alt="Haylee" style="width:100%" class="w3-grayscale">
                             <div class="w3-container w3-black">
                                 <h4>Haylee</h4>
                                 <p>Just me, myself and I, exploring the universe of uknownment. I have a heart of love and a interest of photography.
-I'm excited to share the world with you through my eyes.</p>
+                                    I'm excited to share the world with you through my eyes.</p>
                             </div>
                         </div>
                         <hr>
@@ -208,17 +275,9 @@ I'm excited to share the world with you through my eyes.</p>
                     </div>
                 </div>
             </div>
-rightside;
-    }
-        /**
-     * Creates the bottom part of the page.  This will usually be the footer area and anything else that comes below
-     * the page content.
-     */
-    public static function pageBottom()
-    {
-        echo <<<pagebottom
-         <!-- Footer -->
-            <footer class="w3-bottom-stretched w3-dark-grey w3-padding-32 w3-padding-xlarge">
+
+            <!-- Footer -->
+            <footer class="w3-container w3-dark-grey w3-padding-32 w3-padding-xlarge">
                 <a href="#" class="w3-btn w3-padding-large w3-margin-bottom"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
                 <p>Contact Information: 654.665.6499 | hayleeheaton@yahoo.com </p>
                  <p>&copy; 2015 Connected Bloglife | All Rights Resevered</p>
@@ -249,8 +308,3 @@ rightside;
 
 
 </html>
-pagebottom;
-    }
-
-
-    }

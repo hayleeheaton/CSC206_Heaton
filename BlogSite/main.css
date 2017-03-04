@@ -1035,7 +1035,7 @@ input[type=checkbox].w3-check, input[type=radio].w3-radio {
 }
 
 .w3-top, .w3-bottom {
-    position: fixed;
+    position: absolute;
     width: 100%;
     z-index: 1;
 }
@@ -1044,8 +1044,11 @@ input[type=checkbox].w3-check, input[type=radio].w3-radio {
     top: 0;
 }
 
-.w3-bottom {
+.w3-bottom-stretched {
+    position: absolute;
+    width: 100%;
     bottom: 0;
+    z-index: 1;
 }
 
 .w3-overlay {
