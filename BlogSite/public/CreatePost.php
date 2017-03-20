@@ -2,14 +2,14 @@
 // Load all application files and configurations
 require($_SERVER[ 'DOCUMENT_ROOT' ] . '/../includes/application_includes.php');
 // Include the HTML layout class
-include('../templates/layout.php');
-include('../templates/News.php');
+require_once(FS_TEMPLATES . 'Layout.php');
+require_once(FS_TEMPLATES . 'News.php');
 // Connect to the database
 $db = new Database(DB_HOST, DB_USER, DB_PASS, DB_NAME);
 // Initialize variables
 $requestType = $_SERVER[ 'REQUEST_METHOD' ];
 // Generate the HTML for the top of the page
-Layout::pageTop('CSC206 Project');
+Layout::pageTop();
 // Page content goes here
 ?>
 
@@ -31,9 +31,7 @@ Layout::pageTop('CSC206 Project');
                     $title = $_POST['title'];
                     $content = $_POST['content'];
                     $startDate  = $_POST['startDate'];
-                    $startDate = date('Y-m-d', strtotime($startDate));
                     $endDate  = $_POST['endDate'];
-                    $endDate = date('Y-m-d',strtotime($endDate));
                     // This SQL uses double quotes for the query string.  If a field is not a number (it's a string or a date) it needs
                     // to be enclosed in single quotes.  Note that right after values is a ( and a single quote.  Taht single quote comes right
                     // before the value of $title.  Note also that at the end of $title is a ', ' inside of double quotes.  What this will all render
@@ -50,8 +48,18 @@ Layout::pageTop('CSC206 Project');
 
         <div class="col-md-4">
             <section class="content">
-                <h1>Posts List</h1>
-                <p>Current and active posts.</p>
+                <h1><center>Posts List</center></h1>
+                <p><center>Current and active posts.</center></p>
+
+                <?php
+                $sql = 'select * from posts';
+                $posts = $db->query($sql);
+                // Loop through the posts and display them
+                while ($post = $posts->fetch()) {
+                    // Call the method to create the layout for a post
+                    News::story($post);
+                }
+                ?>
 
             </section>
         </div>
@@ -132,7 +140,7 @@ function showForm($data = null)
                 <label class="col-md-3 control-label" for="submit"></label>
                 <div class="col-md-8">
                     <button id="submit" name="submit" value="Submit" class="btn btn-success">Submit</button>
-                    <button id="cancel" name="cancel" value="Cancel" class="btn btn-info">Cancel</button>
+                    <a href = "index.php" button id="cancel" name="cancel" value="Cancel" class="btn btn-info">Cancel</a></button>
                 </div>
             </div>
     
