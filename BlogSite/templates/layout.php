@@ -213,7 +213,14 @@ rightside;
         /**
      * Creates the bottom part of the page.  This will usually be the footer area and anything else that comes below
      * the page content.
-     */
+         *
+
+
+
+
+
+
+         */
     public static function pageBottom()
     {
         echo <<<pagebottom
@@ -251,6 +258,40 @@ rightside;
 </html>
 pagebottom;
     }
-
-
+    /**
+     * This method will take a 2-dimensional array and create a table.
+     * The header columns are derived from the keys of the row data
+     *
+     * @param $data
+     * @return string
+     */
+    public static function buildTable($data)
+    {
+        // Start building the table
+        $table = '<table class="table table-hover">';
+        // Create the table header row
+        $header = '<tr>';
+        foreach ( $data[ 0 ] as $key => $cell ) {
+            $header .= '<th>' . $key . '</th>';
+        }
+        $header .= '</tr>';
+        // Add the header to the table
+        $table .= $header;
+        // Build the table rows
+        $rowHTML = '';
+        // Loop through each row of data and build a row
+        foreach ( $data as $row ) {
+            $rowHTML .= '<tr>';
+            // Loop through each cell and create the cells
+            foreach ( $row as $cell ) {
+                $rowHTML .= '<td>' . $cell . '</td>';
+            }
+            $rowHTML .= '</tr>';
+        }
+        // Add the rows to the table
+        $table .= $rowHTML;
+        // Close out the table
+        $table .= '</table>';
+        return $table;
     }
+}
