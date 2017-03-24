@@ -9,7 +9,7 @@ $db = new Database(DB_HOST, DB_USER, DB_PASS, DB_NAME);
 // Initialize variables
 $requestType = $_SERVER[ 'REQUEST_METHOD' ];
 // Generate the HTML for the top of the page
-Layout::pageTop();
+Layout::pageTop('Delete Post');
 if ( $requestType == 'GET' ) {
     // use sql to get the post with id = 39
     $sql = 'delete from posts where id = ' . $_GET['id'];//delete

@@ -9,7 +9,7 @@ $db = new Database(DB_HOST, DB_USER, DB_PASS, DB_NAME);
 // Initialize variables
 $requestType = $_SERVER['REQUEST_METHOD'];
 // Generate the HTML for the top of the page
-Layout::pageTop();
+Layout::pageTop('Update Posts');
 // Page content goes here
 ?>
     <div class="container top25">
@@ -18,7 +18,7 @@ Layout::pageTop();
 
                 <?php
                 if ($requestType == 'GET') {
-//
+
                     $sql = 'select * from posts where id = ' . $_GET['id'];
                     $result = $db->query($sql);
                     $row = $result->fetch();
@@ -93,7 +93,7 @@ postform;
                     $endDate = htmlspecialchars($_POST['endDate'], ENT_QUOTES);
 
                     //echo '<pre>' . print_r($_POST) . '</pre>';
-                    $sql = "update posts set title = '$title', content = '$content', startDate = '$startDate', endDate = '$endDate', where id = $id;";
+                    $sql = "update posts set title = '$title', content = '$content', startDate = '$startDate', endDate = '$endDate' where id = $id;";
                     $result = $db->query($sql);
                     //header('Location: index.php');
                 }

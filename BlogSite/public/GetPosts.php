@@ -12,7 +12,7 @@ require_once(FS_TEMPLATES . 'Layout.php');
 // Connect to the database
 $db = new Database(DB_HOST, DB_USER, DB_PASS, DB_NAME);
 // Generate the HTML for the top of the page
-layout::pageTop($title);
+layout::pageTop('Get Posts');
 // Get the posts for this page from the database
 $sql = 'select * from posts';
 $result = $db->query($sql);

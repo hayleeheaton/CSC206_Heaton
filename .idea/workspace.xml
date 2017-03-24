@@ -2,16 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6bfefcd3-281c-4fbb-a87b-cfc94f897b75" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BlogSite/public/indexa.php" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BlogSite/includes/application_includes.php" afterPath="$PROJECT_DIR$/BlogSite/includes/application_includes.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BlogSite/public/CreatePost.php" afterPath="$PROJECT_DIR$/BlogSite/public/CreatePost.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BlogSite/public/DeletePosts.php" afterPath="$PROJECT_DIR$/BlogSite/public/DeletePosts.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BlogSite/public/GetPosts.php" afterPath="$PROJECT_DIR$/BlogSite/public/GetPosts.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BlogSite/public/UpdatePosts.php" afterPath="$PROJECT_DIR$/BlogSite/public/UpdatePosts.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BlogSite/public/ViewPost.php" afterPath="$PROJECT_DIR$/BlogSite/public/ViewPost.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BlogSite/public/index.php" afterPath="$PROJECT_DIR$/BlogSite/public/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BlogSite/templates/News.php" afterPath="$PROJECT_DIR$/BlogSite/templates/News.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BlogSite/templates/layout.php" afterPath="$PROJECT_DIR$/BlogSite/templates/layout.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -27,36 +23,26 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="UpdatePosts.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="UpdatePosts.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/BlogSite/public/UpdatePosts.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="92" column="63" lean-forward="false" selection-start-line="92" selection-start-column="63" selection-end-line="92" selection-end-column="63" />
+            <state relative-caret-position="257">
+              <caret line="78" column="108" lean-forward="true" selection-start-line="78" selection-start-column="108" selection-end-line="78" selection-end-column="108" />
               <folding>
-                <marker date="1490211697294" expanded="true" signature="681:712" ph="select * fro... posts" />
-                <marker date="1490211697294" expanded="true" signature="4360:4476" ph="update posts... " />
+                <marker date="1490313507993" expanded="true" signature="693:724" ph="select * fro... posts" />
+                <marker date="1490313507993" expanded="true" signature="4372:4487" ph="update posts... " />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="layout.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/BlogSite/templates/layout.php">
+      <file leaf-file-name="GetPosts.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/BlogSite/public/GetPosts.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="47" column="51" lean-forward="false" selection-start-line="47" selection-start-column="51" selection-end-line="47" selection-end-column="51" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DeletePosts.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/BlogSite/public/DeletePosts.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="17" column="29" lean-forward="false" selection-start-line="17" selection-start-column="29" selection-end-line="17" selection-end-column="29" />
+            <state relative-caret-position="612">
+              <caret line="41" column="21" lean-forward="true" selection-start-line="41" selection-start-column="21" selection-end-line="41" selection-end-column="21" />
               <folding>
-                <marker date="1490211847350" expanded="true" signature="555:584" ph="delete from " />
+                <marker date="1490308165702" expanded="true" signature="517:536" ph="select * fro... posts" />
               </folding>
             </state>
           </provider>
@@ -65,8 +51,8 @@
       <file leaf-file-name="News.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/BlogSite/templates/News.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="410">
-              <caret line="86" column="9" lean-forward="false" selection-start-line="86" selection-start-column="9" selection-end-line="86" selection-end-column="9" />
+            <state relative-caret-position="87">
+              <caret line="64" column="5" lean-forward="true" selection-start-line="64" selection-start-column="5" selection-end-line="64" selection-end-column="5" />
               <folding>
                 <marker date="1490207430766" expanded="true" signature="2076:2245" ph="..." />
               </folding>
@@ -74,21 +60,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="application_includes.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/BlogSite/includes/application_includes.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="2" lean-forward="true" selection-start-line="5" selection-start-column="2" selection-end-line="5" selection-end-column="2" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="database.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/BlogSite/includes/database.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1326">
-              <caret line="78" column="9" lean-forward="true" selection-start-line="78" selection-start-column="9" selection-end-line="78" selection-end-column="9" />
+            <state relative-caret-position="1098">
+              <caret line="118" column="41" lean-forward="false" selection-start-line="118" selection-start-column="41" selection-end-line="118" selection-end-column="41" />
               <folding />
             </state>
           </provider>
@@ -127,14 +103,14 @@
         <option value="$PROJECT_DIR$/public/updatePosts.php" />
         <option value="$PROJECT_DIR$/BlogSite/includes/application_includes.php" />
         <option value="$PROJECT_DIR$/BlogSite/public/index.php" />
-        <option value="$PROJECT_DIR$/BlogSite/public/CreatePost.php" />
-        <option value="$PROJECT_DIR$/BlogSite/public/GetPosts.php" />
         <option value="$PROJECT_DIR$/BlogSite/templates/News.php" />
-        <option value="$PROJECT_DIR$/BlogSite/public/ViewPost.php" />
         <option value="$PROJECT_DIR$/BlogSite/templates/pageTop.php" />
-        <option value="$PROJECT_DIR$/BlogSite/public/UpdatePosts.php" />
-        <option value="$PROJECT_DIR$/BlogSite/public/DeletePosts.php" />
         <option value="$PROJECT_DIR$/BlogSite/templates/layout.php" />
+        <option value="$PROJECT_DIR$/BlogSite/public/GetPosts.php" />
+        <option value="$PROJECT_DIR$/BlogSite/public/DeletePosts.php" />
+        <option value="$PROJECT_DIR$/BlogSite/public/CreatePost.php" />
+        <option value="$PROJECT_DIR$/BlogSite/public/ViewPost.php" />
+        <option value="$PROJECT_DIR$/BlogSite/public/UpdatePosts.php" />
       </list>
     </option>
   </component>
@@ -170,8 +146,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -272,6 +246,8 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -385,17 +361,18 @@
       <workItem from="1489710395370" duration="3541000" />
       <workItem from="1489854631445" duration="22847000" />
       <workItem from="1490204442094" duration="7568000" />
+      <workItem from="1490307851175" duration="6737000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="139911000" />
+    <option name="totallyTimeSpent" value="146648000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19912152" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.0" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -422,7 +399,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="1" />
+      <option name="time" value="2" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -536,18 +513,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-941">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/BlogSite/public/indexa.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/BlogSite/public/indexa.php" />
     <entry file="file://$PROJECT_DIR$/BlogSite/includes/config.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-15">
@@ -560,7 +529,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -568,7 +536,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-5744">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -591,43 +558,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/BlogSite/public/CreatePost.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="311">
-          <caret line="141" column="36" lean-forward="true" selection-start-line="141" selection-start-column="36" selection-end-line="141" selection-end-column="36" />
-          <folding>
-            <marker date="1490206076756" expanded="true" signature="1956:2098" ph="insert into posts... " />
-            <marker date="1490206076756" expanded="true" signature="2453:2472" ph="select * fro... posts" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BlogSite/public/GetPosts.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
-          <caret line="14" column="22" lean-forward="false" selection-start-line="14" selection-start-column="22" selection-end-line="14" selection-end-column="22" />
-          <folding>
-            <marker date="1490207151198" expanded="true" signature="512:531" ph="select * fro... posts" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/BlogSite/public/ViewPost.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="350">
-          <caret line="74" column="0" lean-forward="true" selection-start-line="74" selection-start-column="0" selection-end-line="74" selection-end-column="0" />
+        <state relative-caret-position="204">
+          <caret line="12" column="26" lean-forward="false" selection-start-line="12" selection-start-column="26" selection-end-line="12" selection-end-column="26" />
           <folding>
-            <marker date="1490207721006" expanded="true" signature="523:554" ph="select * fro... posts" />
+            <marker date="1490308419256" expanded="true" signature="528:559" ph="select * fro... posts" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/BlogSite/templates/News.php">
+    <entry file="file://$PROJECT_DIR$/BlogSite/templates/layout.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="410">
-          <caret line="86" column="9" lean-forward="false" selection-start-line="86" selection-start-column="9" selection-end-line="86" selection-end-column="9" />
+        <state relative-caret-position="255">
+          <caret line="15" column="6" lean-forward="true" selection-start-line="15" selection-start-column="6" selection-end-line="15" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BlogSite/public/DeletePosts.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="28" lean-forward="false" selection-start-line="11" selection-start-column="28" selection-end-line="11" selection-end-column="28" />
           <folding>
-            <marker date="1490207430766" expanded="true" signature="2076:2245" ph="..." />
+            <marker date="1490308165650" expanded="true" signature="568:597" ph="delete from " />
           </folding>
         </state>
       </provider>
@@ -635,45 +589,58 @@
     <entry file="file://$PROJECT_DIR$/BlogSite/includes/application_includes.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
-          <caret line="5" column="2" lean-forward="true" selection-start-line="5" selection-start-column="2" selection-end-line="5" selection-end-column="2" />
+          <caret line="5" column="2" lean-forward="false" selection-start-line="5" selection-start-column="2" selection-end-line="5" selection-end-column="2" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BlogSite/public/CreatePost.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="28" lean-forward="false" selection-start-line="11" selection-start-column="28" selection-end-line="11" selection-end-column="28" />
+          <folding>
+            <marker date="1490308319070" expanded="true" signature="1963:2105" ph="insert into posts... " />
+            <marker date="1490308319070" expanded="true" signature="2460:2479" ph="select * fro... posts" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BlogSite/public/GetPosts.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="612">
+          <caret line="41" column="21" lean-forward="true" selection-start-line="41" selection-start-column="21" selection-end-line="41" selection-end-column="21" />
+          <folding>
+            <marker date="1490308165702" expanded="true" signature="517:536" ph="select * fro... posts" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BlogSite/templates/News.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="87">
+          <caret line="64" column="5" lean-forward="true" selection-start-line="64" selection-start-column="5" selection-end-line="64" selection-end-column="5" />
+          <folding>
+            <marker date="1490207430766" expanded="true" signature="2076:2245" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/BlogSite/includes/database.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1326">
-          <caret line="78" column="9" lean-forward="true" selection-start-line="78" selection-start-column="9" selection-end-line="78" selection-end-column="9" />
+        <state relative-caret-position="1098">
+          <caret line="118" column="41" lean-forward="false" selection-start-line="118" selection-start-column="41" selection-end-line="118" selection-end-column="41" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/BlogSite/public/UpdatePosts.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="92" column="63" lean-forward="false" selection-start-line="92" selection-start-column="63" selection-end-line="92" selection-end-column="63" />
+        <state relative-caret-position="257">
+          <caret line="78" column="108" lean-forward="true" selection-start-line="78" selection-start-column="108" selection-end-line="78" selection-end-column="108" />
           <folding>
-            <marker date="1490211697294" expanded="true" signature="681:712" ph="select * fro... posts" />
-            <marker date="1490211697294" expanded="true" signature="4360:4476" ph="update posts... " />
+            <marker date="1490313507993" expanded="true" signature="693:724" ph="select * fro... posts" />
+            <marker date="1490313507993" expanded="true" signature="4372:4487" ph="update posts... " />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BlogSite/public/DeletePosts.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="29" lean-forward="false" selection-start-line="17" selection-start-column="29" selection-end-line="17" selection-end-column="29" />
-          <folding>
-            <marker date="1490211847350" expanded="true" signature="555:584" ph="delete from " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BlogSite/templates/layout.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="47" column="51" lean-forward="false" selection-start-line="47" selection-start-column="51" selection-end-line="47" selection-end-column="51" />
-          <folding />
         </state>
       </provider>
     </entry>
