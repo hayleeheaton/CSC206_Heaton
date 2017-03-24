@@ -1,15 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6bfefcd3-281c-4fbb-a87b-cfc94f897b75" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BlogSite/public/CreatePost.php" afterPath="$PROJECT_DIR$/BlogSite/public/CreatePost.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BlogSite/public/DeletePosts.php" afterPath="$PROJECT_DIR$/BlogSite/public/DeletePosts.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BlogSite/public/GetPosts.php" afterPath="$PROJECT_DIR$/BlogSite/public/GetPosts.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BlogSite/public/UpdatePosts.php" afterPath="$PROJECT_DIR$/BlogSite/public/UpdatePosts.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BlogSite/public/ViewPost.php" afterPath="$PROJECT_DIR$/BlogSite/public/ViewPost.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BlogSite/templates/layout.php" afterPath="$PROJECT_DIR$/BlogSite/templates/layout.php" />
-    </list>
+    <list default="true" id="6bfefcd3-281c-4fbb-a87b-cfc94f897b75" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -361,16 +353,16 @@
       <workItem from="1489710395370" duration="3541000" />
       <workItem from="1489854631445" duration="22847000" />
       <workItem from="1490204442094" duration="7568000" />
-      <workItem from="1490307851175" duration="6737000" />
+      <workItem from="1490307851175" duration="6840000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="146648000" />
+    <option name="totallyTimeSpent" value="146751000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.0" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
