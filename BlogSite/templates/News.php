@@ -87,5 +87,5 @@ story;
          <a href="DeletePosts.php?id='.$id.'">Delete</a></td>';
         $rowHTML .= '</tr>';
         return $rowHTML;
-    }
+}
 }

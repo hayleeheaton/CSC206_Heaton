@@ -8,20 +8,24 @@ require_once(FS_TEMPLATES . 'News.php');
 $db = new Database(DB_HOST, DB_USER, DB_PASS, DB_NAME);
 // Initialize variables
 $requestType = $_SERVER[ 'REQUEST_METHOD' ];
+if (! isset($_SESSION['user'])) {
+    header('location: logIn.php');
+}
+else {
 // Generate the HTML for the top of the page
-Layout::pageTop('Create Post');
+    Layout::pageTop('Create Post');
 // Page content goes here
-?>
+    ?>
 
     <div class="container top25">
         <div class="col-md-8">
             <section class="content">
 
                 <?php
-                if ( $requestType == 'GET' ) {
+                if ($requestType == 'GET') {
                     // Display the form
                     showForm();
-                } elseif ( $requestType == 'POST' ) {
+                } elseif ($requestType == 'POST') {
                     // Process data that was submitted
                     echo '<h2>This is the data that was entered</h2>';
                     echo '<pre>';
@@ -30,8 +34,8 @@ Layout::pageTop('Create Post');
                     // pull the fields from the POST array.
                     $title = $_POST['title'];
                     $content = $_POST['content'];
-                    $startDate  = $_POST['startDate'];
-                    $endDate  = $_POST['endDate'];
+                    $startDate = $_POST['startDate'];
+                    $endDate = $_POST['endDate'];
                     // This SQL uses double quotes for the query string.  If a field is not a number (it's a string or a date) it needs
                     // to be enclosed in single quotes.  Note that right after values is a ( and a single quote.  Taht single quote comes right
                     // before the value of $title.  Note also that at the end of $title is a ', ' inside of double quotes.  What this will all render
@@ -48,8 +52,12 @@ Layout::pageTop('Create Post');
 
         <div class="col-md-4">
             <section class="content">
-                <h1><center>Posts List</center></h1>
-                <p><center>Current and active posts.</center></p>
+                <h1>
+                    <center>Posts List</center>
+                </h1>
+                <p>
+                <center>Current and active posts.</center>
+                </p>
 
                 <?php
                 $sql = 'select * from posts';
@@ -65,9 +73,10 @@ Layout::pageTop('Create Post');
         </div>
     </div>
 
-<?php
+    <?php
 // Generate the page footer
-Layout::pageBottom();
+    Layout::pageBottom();
+}
 /**
  * Functions that support the createPost page
  */

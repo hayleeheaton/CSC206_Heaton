@@ -11,14 +11,19 @@ require_once(FS_TEMPLATES . 'News.php');
 require_once(FS_TEMPLATES . 'Layout.php');
 // Connect to the database
 $db = new Database(DB_HOST, DB_USER, DB_PASS, DB_NAME);
+
+if (! isset($_SESSION['user'])) {
+    header('location: logIn.php');
+}
+else {
 // Generate the HTML for the top of the page
-layout::pageTop('Get Posts');
+    layout::pageTop('Get Posts');
 // Get the posts for this page from the database
-$sql = 'select * from posts';
-$result = $db->query($sql);
-$posts = $result->fetchAll();
+    $sql = 'select * from posts';
+    $result = $db->query($sql);
+    $posts = $result->fetchAll();
 // Page content goes here
-?>
+    ?>
 
     <div class="container top25">
         <div class="col-md-12">
@@ -38,5 +43,7 @@ $posts = $result->fetchAll();
         </div>
     </div>
 
-<?php
-Layout::pageBottom();
+    <?php
+
+    Layout::pageBottom();
+}
