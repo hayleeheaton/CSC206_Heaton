@@ -37,19 +37,15 @@ h1, h2, h3, h4, h5, h6 {
 
     <!-- Navigation bar with social media icons -->
     <ul class="w3-navbar w3-black w3-hide-small">
-        <li><a href="#"><i class="fa fa-facebook-official"></i></a></li>
-        <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-        <li><a href="#"><i class="fa fa-snapchat"></i></a></li>
-        <li><a href="#"><i class="fa fa-flickr"></i></a></li>
-        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-        <h7 align="left"><a href = "index.php">Home | </h7>
-        <h7 align="left"><a href = "login.php">Login | </h7>
-        <h7 align="left"><a href = "EditUser.php">Edit Profile | </h7>
-        <h7 align="left"><a href = "CreateUser.php">Sign Up | </h7>
-        <li><a href="/CreatePost.php"><img src="../assets/images/plussign.png"></li>
-        <h7 align="left"><a href = "GetPosts.php"> All Posts</h7>
-        <li class="w3-right"><a href="#"><i class="fa fa-search"></i></a></li>
+        <li align="left"><a href = "index.php">Home</li>
+        <li align="left"><a href = "GetPosts.php">Post List</li>
+        <li align= "left"><a href="/CreatePost.php">Create Post</li>
+        <li align="left"><a href = "EditUser.php">Edit Profile</li>
+        <li class = "w3-right"><a href ="logout.php">Log Out</li>
+        <li class ="w3-right"><a href = "CreateUser.php">Sign Up</li>
+        <li class ="w3-right"><a href = "login.php">Log In</li>
+           
+       
     </ul>
 
     <!-- w3-content defines a container for fixed size centered content,

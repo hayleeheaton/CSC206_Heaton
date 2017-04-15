@@ -65,7 +65,7 @@ if ( $requestType == 'GET') {
 }
 if ( $requestType == 'POST') {
 
-    echo '<h1> Process Login form</h1>';
+    echo '<h1>Logging In...</h1>';
     $input = $_POST;
 
 //Check to see if user exists
@@ -77,9 +77,9 @@ if ( $requestType == 'POST') {
         if (password_verify($input['password'], $user['password'])) {
             $_SESSION['user'] = $user;
         //We have a user so let's compare passwords
-            echo '<h1>we are logged in</h1>';
+            echo '<h1>Welcome Back!</h1>';
         } else {
-            echo '<h1>Invalid password</h1>';
+            echo '<h1>Invalid password. Please try again or Sign Up</h1>';
         }
     }
 }else{
