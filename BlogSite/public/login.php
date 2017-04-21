@@ -27,9 +27,9 @@ function showLoginForm()
 
 <!-- Text input-->
 <div class="form-group">
-  <label class="col-md-4 control-label" for="textinput">Username</label>  
+  <label class="col-md-4 control-label" for="username">Username</label>  
   <div class="col-md-4">
-  <input id="textinput" name="email" type="text" placeholder="Username" class="form-control input-md" required="">
+  <input id="username" name="email" type="text" placeholder="Username" class="form-control input-md" required="">
     
   </div>
 </div>
@@ -101,7 +101,7 @@ function showForm($data = null)
 {
     $mypassword = $data['password1'];
     $myemail = $data['email'];
-    layout::loginform();
+    // layout::loginform();
 }
 
 

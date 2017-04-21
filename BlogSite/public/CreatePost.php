@@ -67,7 +67,8 @@ else {
                                 print_r($_FILES);
                                 echo '</pre><br>';
                             }
-                        }}//else{$fileName = "logo.bmp";}
+                        }
+                    }//else{$fileName = "logo.bmp";}
                     //not file
 
                     //echo '<h3>Error</h3><p>There was an error uploading the file</p>';

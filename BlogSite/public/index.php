@@ -33,28 +33,26 @@ Layout::pageTop('CSC206 Project');
                 ?>
             </section>
         </div>
-        <div class = "w3-third">
-             <section class="rightSide">
+        <div class = "w3-twothird w3-right">
+             <section class="SideBar">
                 <?php
-                layout::rightSide();
+                layout::SideBar();
                 ?>
              </section>
         </div>
     </div>
 
-<div class="col-md-6">
+<div class="w3-twothird">
     <section class="content">
-        <p>1</p>
     </section>
 </div>
 
 
-<div class = "container bottom25">
-    <div class = "w3-bottom-stretched w3-dark-grey w3-padding-32 w3-padding-xlarge">
+<div class = "w3-container w3-bottom w3-dark-grey w3-padding-32 w3-padding-xlarge">
         <?php
         // Generate the page footer
         layout::pageBottom();
         ?>
-    </div>
 </div>
+
 

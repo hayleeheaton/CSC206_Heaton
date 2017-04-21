@@ -1,6 +1,40 @@
 <?php
+
 class layout
 {
+    public static function LoggedIn()
+    {
+        $user = $_SESSION['user'];
+        $x = '
+        <div class="blog-masthead" >
+        <div class="container" >
+            <nav class="blog-nav" >
+                <li align="left"><a href = "index.php">Home1</li>
+                <li align="left"><a href = "GetPosts.php">Post List</li>
+                <li align= "left"><a href="/CreatePost.php">Create Post</li>
+                <li align="left"><a href = "EditUser.php">Edit Profile</li>
+                <div class="blog-nav-item3">Hello, ' . $user['firstName'] . ' ' . $user['lastName'] .
+            '</div><a class="blog-nav-item2" href="logout.php">Logout</a>
+            </nav >
+        </div >
+    </div >';
+        return $x;
+    }
+
+    public static function LoggedOut()
+    {
+        $x = '
+        <div class="blog-masthead" >
+            <div class="container" >
+            <nav class="blog-nav" >
+                <li align = "left" ><a href = "index.php" > Home2</li>
+                <li class ="w3-right"><a href = "CreateUser.php" > Sign Up </li>
+                <li class ="w3-right"><a href = "login.php" > Log In </li>
+            </nav >
+            </div>      
+         </div>';
+        return $x;
+    }
     /**
      * Creates the top part of the page.  This will usually be the HEAD area plus the nav bar and anything else that is
      * above the "content" of that page.
@@ -9,11 +43,19 @@ class layout
      */
     public static function pageTop($title)
     {
+            if ( isset($_SESSION['user']))
+            {
+                $menu = static::LoggedIn();
+            } else {
+                $menu = static::LoggedOut();
+            }
         // This builds the web path to the app.css file and is embedded in the header below
         echo <<<pagetop
     <!DOCTYPE html>
 <html>
 <head>
+
+
     <title>$title</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -33,37 +75,28 @@ h1, h2, h3, h4, h5, h6 {
 </head>
 
 
-<body class="w3-light-grey">
+    <body class="w3-light-grey">
 
     <!-- Navigation bar with social media icons -->
     <ul class="w3-navbar w3-black w3-hide-small">
-        <li align="left"><a href = "index.php">Home</li>
-        <li align="left"><a href = "GetPosts.php">Post List</li>
-        <li align= "left"><a href="/CreatePost.php">Create Post</li>
-        <li align="left"><a href = "EditUser.php">Edit Profile</li>
-        <li class = "w3-right"><a href ="logout.php">Log Out</li>
-        <li class ="w3-right"><a href = "CreateUser.php">Sign Up</li>
-        <li class ="w3-right"><a href = "login.php">Log In</li>
-           
-       
+        $menu
     </ul>
-
     <!-- w3-content defines a container for fixed size centered content,
     and is wrapped around the whole page content, except for the footer in this example -->
     <div class="w3-content" style="max-width:1600px">
-
+    
         <!-- Header -->
         <header class="w3-container w3-center w3-padding-48 w3-white">
-            <h1 class="w3-xxxlarge"><b>CONNECTED BLOGLIFE</b></h1>
-            <h6>Welcome to the blog of <span class="w3-tag">Haylee's world</span></h6>
+            <h1 class="w3-xxxlarge"><b>BOOKS TO MOVIES</b></h1>
+            <h6>Centered around works by <span class="w3-tag">Nicholas Sparks</span></h6>
         </header>
 
         <!-- Image header -->
         <header class="w3-display-container w3-wide" id="home">
-            <img class="background-image" src="/assets/images/ChimneyRocks.jpg">
+            <img class="background-image" src="/assets/images/Nicholas Sparks.jpg">
             <div class="w3-display-left w3-padding-xlarge">
-                <h1 class="w3-text-white">Haylee's</h1>
-                <h1 class="w3-jumbo w3-text-white w3-hide-small"><b>PHOTOGRAPHY BLOG</b></h1>
+                <h1 class="w3-text-white">Nicholas Sparks's</h1>
+                <h1 class="w3-jumbo w3-text-white w3-hide-small"><b>BOOKS AND MOVIES</b></h1>
                 <h6><button class="w3-btn w3-white w3-padding-large w3-large w3-opacity w3-hover-opacity-off" onclick="document.getElementById('subscribe').style.display='block'">SUBSCRIBE</button></h6>
             </div>
         </header>
@@ -71,18 +104,20 @@ h1, h2, h3, h4, h5, h6 {
 pagetop;
     }
 
-    public static function rightSide()
+    public static function SideBar()
     {
-        echo <<<rightside
+        echo <<<SideBar
   <!-- About/Information menu -->
-                    <div class=".w3-col m6">
+                    <div class="w3-twothird w3-right">
                         <!-- About Card -->
                         <div class="w3-white w3-margin">
-                            <img src="../assets/images/TrainTracks.jpg" alt="Haylee" style="width:100%" class="w3-grayscale">
+                            <img src="../assets/images/Nicholas Sparks Bio.jpg" alt="Biography" style="width:100%" class="w3-grayscale">
                             <div class="w3-container w3-black">
-                                <h4>Haylee</h4>
-                                <p>Just me, myself and I, exploring the universe of uknownment. I have a heart of love and a interest of photography.
-I'm excited to share the world with you through my eyes.</p>
+                                <h4>Nicholas</h4>
+                                <p>Nicholas Sparks is one of the world’s most beloved storytellers. 
+                                All of his books have been New York Times bestsellers, with over 
+                                105 million copies sold worldwide, in more than 50 languages, 
+                                including over 75 million copies in the United States alone.</p>
                             </div>
                         </div>
                         <hr>
@@ -90,32 +125,32 @@ I'm excited to share the world with you through my eyes.</p>
                         <!-- Posts -->
                         <div class="w3-white w3-margin">
                             <div class="w3-container w3-padding w3-black">
-                                <h4>Popular Posts</h4>
+                                <h4>Popular Books</h4>
                             </div>
                             <ul class="w3-ul w3-hoverable w3-white">
                                 <li class="w3-padding-16">
-                                    <img src="../assets/images/Phantom 3.jpg" alt="Drone" class="w3-left w3-margin-right" style="width:50px">
-                                    <span class="w3-large">Phantom 3 Drone</span>
+                                    <img src="../assets/images/The Best of Me.jpeg" alt="TheBestofMe" class="w3-left w3-margin-right" style="width:50px">
+                                    <span class="w3-large">The Best of Me</span>
                                     <br>
-                                    <span>Christmas Present</span>
+                                    <span>2014</span>
                                 </li>
                                 <li class="w3-padding-16">
-                                    <img src="../assets/images/Gabi2.jpg" alt="Center of Campus" class="w3-left w3-margin-right" style="width:50px">
-                                    <span class="w3-large">Photoshoot!</span>
+                                    <img src="../assets/images/Safe Haven.jpg" alt="SafeHaven" class="w3-left w3-margin-right" style="width:50px">
+                                    <span class="w3-large">Safe Haven</span>
                                     <br>
-                                    <span>Center of Campus</span>
+                                    <span>2013</span>
                                 </li>
                                 <li class="w3-padding-16">
-                                    <img src="../assets/images/Flying the Drone.jpg" alt="Dad Hunter and Vlad" class="w3-left w3-margin-right" style="width:50px">
-                                    <span class="w3-large">High in the Sky</span>
+                                    <img src="../assets/images/A Walk to Remember.jpeg" alt="AWalktoRemember" class="w3-left w3-margin-right" style="width:50px">
+                                    <span class="w3-large">A Walk to Remember</span>
                                     <br>
-                                    <span>Dad, Hunter and Vlad flying the drone.</span>
+                                    <span>2002</span>
                                 </li>
                                 <li class="w3-padding-16">
-                                    <img src="../assets/images/Kari2.jpg" alt="Old Main" class="w3-left w3-margin-right w3-sepia" style="width:50px">
-                                    <span class="w3-large">Photoshoot!</span>
+                                    <img src="../assets/images/The Notebook.jpeg" alt="TheNotebook" class="w3-left w3-margin-right w3-sepia" style="width:50px">
+                                    <span class="w3-large">The Notebook</span>
                                     <br>
-                                    <span>Old Main</span>
+                                    <span>2004</span>
                                 </li>
                             </ul>
                         </div>
@@ -134,28 +169,7 @@ I'm excited to share the world with you through my eyes.</p>
                         </div>
                         <hr>
 
-                        <!-- Tags -->
-                        <div class="w3-white w3-margin">
-                            <div class="w3-container w3-padding w3-black">
-                                <h4>Tags</h4>
-                            </div>
-                            <div class="w3-container w3-white">
-                                <p>
-                                    <span class="w3-tag w3-black w3-margin-bottom">Fashion</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">New York</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">London</span>
-                                    <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Christmas</span>
-                                    <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Vacation</span>
-                                    <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Chincoteague Island</span>
-                                    <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Prom</span>
-                                    <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Hunter</span>
-                                    <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Family</span>
-                                    <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Hollidaysburg</span>
-                                    <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Downtown</span>
-                                    <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Friends</span>
-                                    <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Photoshoots</span>
-                                    <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">YMCA</span>
-                                </p>
-                            </div>
-                        </div>
+                   
                         <hr>
 
 
@@ -163,10 +177,10 @@ I'm excited to share the world with you through my eyes.</p>
 
                         <div class="w3-white w3-margin">
                             <div class="w3-container w3-padding w3-black">
-                                <h4>Follow Me</h4>
+                                <h4>Follow Him</h4>
                             </div>
                             <div class="w3-container w3-xlarge w3-padding">
-                                <i class="fa fa-facebook-official w3-hover-text-indigo"></i>
+                                <i class="fa fa-facebook-official w3-hover-text-indigo" a href = "https://www.facebook.com/NicholasSparks/></a></i>
                                 <i class="fa fa-instagram w3-hover-text-purple"></i>
                                 <i class="fa fa-snapchat w3-hover-text-yellow"></i>
                                 <i class="fa fa-pinterest-p w3-hover-text-red"></i>
@@ -175,18 +189,6 @@ I'm excited to share the world with you through my eyes.</p>
                             </div>
                         </div>
                         <hr>
-
-                        <!-- Subscribe -->
-                        <div class="w3-white w3-margin">
-                            <div class="w3-container w3-padding w3-black">
-                                <h4>Subscribe</h4>
-                            </div>
-                            <div class="w3-container w3-white">
-                                <p>Enter your e-mail below and get notified on the latest blog posts.</p>
-                                <p><input class="w3-input w3-border" type="text" placeholder="Enter e-mail" style="width:100%"></p>
-                                <p><button type="button" class="w3-btn-block w3-padding w3-red w3-opacity w3-hover-opacity-off">Subscribe</button></p>
-                            </div>
-                        </div>
 
                         <!-- END About/Intro Menu -->
                     </div>
@@ -209,50 +211,31 @@ I'm excited to share the world with you through my eyes.</p>
                     </div>
                 </div>
             </div>
-rightside;
+</body>
+SideBar;
     }
-        /**
+
+    /**
      * Creates the bottom part of the page.  This will usually be the footer area and anything else that comes below
      * the page content.
-         *
+     *
 
 
 
 
 
 
-         */
+     */
     public static function pageBottom()
     {
         echo <<<pagebottom
          <!-- Footer -->
-            <footer class="w3-bottom-stretched w3-dark-grey w3-padding-32 w3-padding-xlarge">
                 <a href="#" class="w3-btn w3-padding-large w3-margin-bottom"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
                 <p>Contact Information: 654.665.6499 | hayleeheaton@yahoo.com </p>
                  <p>&copy; 2015 Connected Bloglife | All Rights Resevered</p>
             </footer>
 
-            <script>
-                // Toggle between hiding and showing blog replies/comments
-                document.getElementById("myBtn").click();
-                function myFunction(id) {
-                    var x = document.getElementById(id);
-                    if (x.className.indexOf("w3-show") == -1) {
-                        x.className += " w3-show";
-                    } else {
-                        x.className = x.className.replace(" w3-show", "");
-                    }
-                }
-
-                function likeFunction(x) {
-                    x.style.fontWeight = "bold";
-                    x.innerHTML = "&#10003; Liked";
-                }
-            </script>
-
-            <script type="text/javascript" src="//www.w3schools.com/utilcave_com/inc/ezf-min.php?a=a&amp;cb=3&amp;shcb=5" style="display:none;"></script>
-
-</body>
+            
 
 
 
