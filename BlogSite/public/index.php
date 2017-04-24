@@ -48,7 +48,7 @@ Layout::pageTop('CSC206 Project');
 </div>
 
 
-<div class = "w3-container w3-bottom w3-dark-grey w3-padding-32 w3-padding-xlarge">
+<div class = "w3-col w3 w3-border-dark-gray w3-padding-32 w3-padding-xlarge">
         <?php
         // Generate the page footer
         layout::pageBottom();

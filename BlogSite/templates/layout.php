@@ -9,12 +9,11 @@ class layout
         <div class="blog-masthead" >
         <div class="container" >
             <nav class="blog-nav" >
-                <li align="left"><a href = "index.php">Home1</li>
+                <li align="left"><a href = "index.php">Home</li>
                 <li align="left"><a href = "GetPosts.php">Post List</li>
                 <li align= "left"><a href="/CreatePost.php">Create Post</li>
                 <li align="left"><a href = "EditUser.php">Edit Profile</li>
-                <div class="blog-nav-item3">Hello, ' . $user['firstName'] . ' ' . $user['lastName'] .
-            '</div><a class="blog-nav-item2" href="logout.php">Logout</a>
+                <li class="w3-right"><a href="logout.php">Logout</li>
             </nav >
         </div >
     </div >';
@@ -27,7 +26,7 @@ class layout
         <div class="blog-masthead" >
             <div class="container" >
             <nav class="blog-nav" >
-                <li align = "left" ><a href = "index.php" > Home2</li>
+                <li align = "left" ><a href = "index.php" > Home</li>
                 <li class ="w3-right"><a href = "CreateUser.php" > Sign Up </li>
                 <li class ="w3-right"><a href = "login.php" > Log In </li>
             </nav >
@@ -35,6 +34,7 @@ class layout
          </div>';
         return $x;
     }
+
     /**
      * Creates the top part of the page.  This will usually be the HEAD area plus the nav bar and anything else that is
      * above the "content" of that page.
@@ -43,12 +43,11 @@ class layout
      */
     public static function pageTop($title)
     {
-            if ( isset($_SESSION['user']))
-            {
-                $menu = static::LoggedIn();
-            } else {
-                $menu = static::LoggedOut();
-            }
+        if (isset($_SESSION['user'])) {
+            $menu = static::LoggedIn();
+        } else {
+            $menu = static::LoggedOut();
+        }
         // This builds the web path to the app.css file and is embedded in the header below
         echo <<<pagetop
     <!DOCTYPE html>
@@ -180,7 +179,7 @@ pagetop;
                                 <h4>Follow Him</h4>
                             </div>
                             <div class="w3-container w3-xlarge w3-padding">
-                                <i class="fa fa-facebook-official w3-hover-text-indigo" a href = "https://www.facebook.com/NicholasSparks/></a></i>
+                                <i class="fa fa-facebook-official w3-hover-text-indigo"></i>
                                 <i class="fa fa-instagram w3-hover-text-purple"></i>
                                 <i class="fa fa-snapchat w3-hover-text-yellow"></i>
                                 <i class="fa fa-pinterest-p w3-hover-text-red"></i>
@@ -219,28 +218,26 @@ SideBar;
      * Creates the bottom part of the page.  This will usually be the footer area and anything else that comes below
      * the page content.
      *
-
-
-
-
-
-
      */
     public static function pageBottom()
     {
         echo <<<pagebottom
          <!-- Footer -->
+         <div class="w3-padding-32 w3-padding-xlarge">
                 <a href="#" class="w3-btn w3-padding-large w3-margin-bottom"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
-                <p>Contact Information: 654.665.6499 | hayleeheaton@yahoo.com </p>
-                 <p>&copy; 2015 Connected Bloglife | All Rights Resevered</p>
+                <p>Contact Information: 654.665.6499 | fans@yahoo.com </p>
+                 <p>© 2015 Nicholas Sparks | All Rights Resevered</p>
+             </div>
             </footer>
+</html>
+pagebottom;
+    }
+}
+
+
 
             
 
 
 
-</html>
-pagebottom;
-    }
 
-}

@@ -82,9 +82,6 @@ if ( $requestType == 'POST') {
             echo '<h1>Invalid password. Please try again or Sign Up</h1>';
         }
     }
-}else{
-    echo '<h1>User not found</h1>';
-
 }
 //Generate the page footer
 Layout::pageBottom('');
