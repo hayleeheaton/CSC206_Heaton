@@ -1,13 +1,6 @@
 <?php
-// Load all application files and configurations
-require($_SERVER['DOCUMENT_ROOT'] . '/../includes/application_includes.php');
-// Include the HTML layout class
-include('../templates/layout.php');
-include('../templates/News.php');
-// Connect to the database
-$db = new Database(DB_HOST, DB_USER, DB_PASS, DB_NAME);
-// Initialize variables
-$requestType = $_SERVER['REQUEST_METHOD'];
+// Include the basic configuration elements
+require_once($_SERVER['DOCUMENT_ROOT'].'/../includes/application_includes.php');
 // Generate the HTML for the top of the page
 Layout::pageTop('Update Posts');
 // Page content goes here

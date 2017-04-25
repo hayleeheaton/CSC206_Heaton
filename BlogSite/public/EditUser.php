@@ -1,14 +1,8 @@
 <?php
-// Load all application files and configurations
-require($_SERVER['DOCUMENT_ROOT'] . '/../includes/application_includes.php');
-// Include the HTML layout class
-include('../Templates/layout.php');
-include('../Templates/News.php');
-// Connect to the database
-// Initialize variables
-$requestType = $_SERVER['REQUEST_METHOD'];
+// Include the basic configuration elements
+require_once($_SERVER['DOCUMENT_ROOT'].'/../includes/application_includes.php');
 // Generate the HTML for the top of the page
-Layout::pageTop('World Travels');
+Layout::pageTop('Edit Profile');
 // Page content goes here
 ?>
     <div class="container top25">
@@ -18,7 +12,7 @@ Layout::pageTop('World Travels');
                 <?php
                 if ($requestType == 'GET') {
 
-                    $sql = "select * from users where id = '" . $_GET['id'] . "'";
+                    $sql = "select * from users where email = '" . $_GET['email'] . "'";
                     $result = $db->query($sql);
                     $row = $result->fetch();
                     //News::story($row);
@@ -28,46 +22,49 @@ Layout::pageTop('World Travels');
                     $firstName = $row['firstName'];
                     $lastName = $row['lastName'];
                     echo <<<postform
-    <form id="createPostForm" action='updateUser.php' method="POST" class="form-horizontal">
-        <fieldset>
+    <form class="form-horizontal">
+<fieldset>
+
+<!-- Form Name -->
+<legend>Update Profile</legend>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="textinput">Email</label>  
+  <div class="col-md-4">
+  <input id="textinput" name="textinput" type="text" placeholder="username" class="form-control input-md">
     
-            <!-- Form Name -->
-            <legend>Create User</legend>
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="textinput">First Name</label>  
+  <div class="col-md-4">
+  <input id="textinput" name="textinput" type="text" placeholder="First Name" class="form-control input-md" required="">
     
-            <!-- Text input-->
-            <div class="form-group">
-                <label class="col-md-3 control-label" for="email">Email</label>
-                <div class="col-md-8">
-                <label class="col-md-3 control-label" for="email">$email</label>
-                </div>
-            </div>
-               
-                        <div class="form-group">
-                <label class="col-md-3 control-label" for="firstName">First Name</label>
-                <div class="col-md-8">
-                    <input class="form-control" type="text" placeholder="First Name" id="firstName" name="firstName" value="$firstName">
-                </div>
-            </div>
-            
-                        <div class="form-group">
-                <label class="col-md-3 control-label" for="lastName">Last Name</label>
-                <div class="col-md-8">
-                    <input class="form-control" type="text" placeholder="Last Name" id="lastName" name="lastName" value="$lastName">
-                </div>
-            </div>
-            
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="textinput">Last Name</label>  
+  <div class="col-md-4">
+  <input id="textinput" name="textinput" type="text" placeholder="Last Name" class="form-control input-md" required="">
     
-            <!-- Button (Double) -->
-            <div class="form-group">
-                <label class="col-md-3 control-label" for="submit"></label>
-                <div class="col-md-8">
-                    <button id="submit" name="submit" value="Submit" class="btn btn-success">Submit</button>
-                    <button id="cancel" name="cancel" value="Cancel" class="btn btn-info">Cancel</button>
-                </div>
-            </div>
-    
-        </fieldset>
-    </form>
+  </div>
+</div>
+
+<!-- Button -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="singlebutton"></label>
+  <div class="col-md-4">
+    <button id="singlebutton" name="singlebutton" class="btn btn-primary">Update Profile</button>
+  </div>
+</div>
+
+</fieldset>
+</form>
 postform;
                 } elseif ($requestType == 'POST') {
                     //Validate data

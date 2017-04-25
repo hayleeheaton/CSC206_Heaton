@@ -24,7 +24,13 @@ class news
         $content = $data['content'];
         $startDate = $data['startDate'];
         $endDate = $data['endDate'];
-        $image = '/images/' . $data['image'];
+        $pic = $_SERVER['DOCUMENT_ROOT'] . '/assets/images/' . $data['image'];
+        if (is_file($pic)) {
+            $image = '<img src = "/assets/images/' . $data['image'] . '" width="250">';
+        } else {
+            $image = '';
+        }
+
         $id = $data['id'];
         // $author = $data['firstname'] . ' ' . $data['lastname'];
         echo <<<story
@@ -32,7 +38,7 @@ class news
             <h2>$title</h2>
             <h5>$startDate</h5>
             <h5>$endDate</h5>
-            <img src = "$image">
+            $image
             <p>$content</p>
         </div>        
 story;

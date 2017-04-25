@@ -1,17 +1,6 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Brett
- * Date: 3/16/2017
- * Time: 6:07 PM
- */
-// Load all application files and configurations
-require($_SERVER[ 'DOCUMENT_ROOT' ] . '/../includes/application_includes.php');
-require_once(FS_TEMPLATES . 'News.php');
-require_once(FS_TEMPLATES . 'Layout.php');
-// Connect to the database
-$db = new Database(DB_HOST, DB_USER, DB_PASS, DB_NAME);
-
+// Include the basic configuration elements
+require_once($_SERVER['DOCUMENT_ROOT'].'/../includes/application_includes.php');
 if (! isset($_SESSION['user'])) {
     header('location: logIn.php');
 }

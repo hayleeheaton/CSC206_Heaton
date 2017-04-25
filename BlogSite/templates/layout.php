@@ -3,53 +3,56 @@
 class layout
 {
     public static function LoggedIn()
-    {
-        $user = $_SESSION['user'];
-        $x = '
-        <div class="blog-masthead" >
-        <div class="container" >
-            <nav class="blog-nav" >
-                <li align="left"><a href = "index.php">Home</li>
-                <li align="left"><a href = "GetPosts.php">Post List</li>
-                <li align= "left"><a href="/CreatePost.php">Create Post</li>
-                <li align="left"><a href = "EditUser.php">Edit Profile</li>
-                <li class="w3-right"><a href="logout.php">Logout</li>
-            </nav >
-        </div >
-    </div >';
-        return $x;
-    }
+     {
+         $user = $_SESSION['user'];
+         $x = '
+         <div class="blog-masthead" >
+         <div class="container" >
+             <nav class="blog-nav" >
+             <ul class="w3-ul">
+                 <li align="left"><a href = "index.php">Home</a></li>
+                 <li align="left"><a href = "GetPosts.php">Post List</a></li>
+                 <li align= "left"><a href="/CreatePost.php">Create Post</a></li>
+                 <li align="left"><a href = "EditUser.php">Edit Profile</a></li>
+                 <li align=left"><a href="logout.php">Logout</a></li>
+                 </ul>
+             </nav >
+         </div >
+     </div >';
+         return $x;
+     }
 
     public static function LoggedOut()
-    {
-        $x = '
-        <div class="blog-masthead" >
-            <div class="container" >
-            <nav class="blog-nav" >
-                <li align = "left" ><a href = "index.php" > Home</li>
-                <li class ="w3-right"><a href = "CreateUser.php" > Sign Up </li>
-                <li class ="w3-right"><a href = "login.php" > Log In </li>
-            </nav >
-            </div>      
-         </div>';
-        return $x;
-    }
-
-    /**
-     * Creates the top part of the page.  This will usually be the HEAD area plus the nav bar and anything else that is
-     * above the "content" of that page.
-     *
-     * @param $title
-     */
-    public static function pageTop($title)
-    {
-        if (isset($_SESSION['user'])) {
-            $menu = static::LoggedIn();
-        } else {
-            $menu = static::LoggedOut();
-        }
-        // This builds the web path to the app.css file and is embedded in the header below
-        echo <<<pagetop
+     {
+            $x = '
+         <div class="blog-masthead" >
+             <div class="container" >
+             <div class="blog-nav" >
+             <ul class="w3-ul">
+                 <li align = "left" ><a href = "index.php" > Home</a></li>
+                 <li class ="left"><a href = "CreateUser.php" > Sign Up</a> </li>
+                 <li class ="left"><a href = "login.php" > Log In</a> </li>
+                 </ul>
+             </nav >
+             </div>      
+          </div>';
+            return $x;
+     }
+      /**		      /**
+       * Creates the top part of the page.  This will usually be the HEAD area plus the nav bar and anything else that is		       * Creates the top part of the page.  This will usually be the HEAD area plus the nav bar and anything else that is
+       * above the "content" of that page.		       * above the "content" of that page.
+      @@ -9,11 +43,19 @@ class layout
+       */
+      public static function pageTop($title)
+      {
+          {
+              if (isset($_SESSION['user'])) {
+                  $menu = static::LoggedIn();
+              } else {
+                  $menu = static::LoggedOut();
+              }
+              // This builds the web path to the app.css file and is embedded in the header below		          // This builds the web path to the app.css file and is embedded in the header below
+              echo <<<pagetop
     <!DOCTYPE html>
 <html>
 <head>
@@ -77,9 +80,10 @@ h1, h2, h3, h4, h5, h6 {
     <body class="w3-light-grey">
 
     <!-- Navigation bar with social media icons -->
-    <ul class="w3-navbar w3-black w3-hide-small">
+    <ul class= "w3-bar w3-black w3-hide-small w3-ul">
         $menu
     </ul>
+        
     <!-- w3-content defines a container for fixed size centered content,
     and is wrapped around the whole page content, except for the footer in this example -->
     <div class="w3-content" style="max-width:1600px">
@@ -101,7 +105,8 @@ h1, h2, h3, h4, h5, h6 {
         </header>
 
 pagetop;
-    }
+          }
+      }
 
     public static function SideBar()
     {
@@ -233,11 +238,3 @@ SideBar;
 pagebottom;
     }
 }
-
-
-
-            
-
-
-
-
